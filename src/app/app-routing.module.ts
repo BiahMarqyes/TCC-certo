@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'anotacoes',
+    loadChildren: () => import('./anotacoes/anotacoes.module').then( m => m.AnotacoesPageModule)
   },
+
 ];
 
 @NgModule({
