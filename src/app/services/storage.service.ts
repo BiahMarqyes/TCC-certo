@@ -28,12 +28,4 @@ export class StorageService {
     this._storage?.remove(key);
   }
 
-  public getAll(){
-    const lista = [];
-    this._storage.forEach((value, key, index) => {
-      lista.push(value);
-    });
-    return lista;
-  }
-
 }
