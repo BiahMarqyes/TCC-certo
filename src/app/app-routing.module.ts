@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'anotacoes',
     loadChildren: () => import('./anotacoes/anotacoes.module').then( m => m.AnotacoesPageModule)
   },
+  {
+    path: 'vacina',
+    loadChildren: () => import('./vacina/vacina.module').then( m => m.VacinaPageModule)
+  },
 
 ];
 
