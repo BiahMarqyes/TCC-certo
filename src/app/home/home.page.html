@@ -8,10 +8,11 @@
 
 <ion-content [fullscreen]="true">
   <ion-card>
-  <ion-datetime></ion-datetime>
+  <a href="/anotacoes"><ion-datetime></ion-datetime></a>
 </ion-card>
 
 <a href="anotacoes"><ion-button>Anotar</ion-button></a>
+
 
 <ion-item-sliding *ngFor="let user of listaAnotacoes">
   <ion-item>
@@ -30,4 +31,22 @@
     </ion-item-option>
   </ion-item-options>
 </ion-item-sliding>
+
+<div>
+<ion-fab vertical="buttom" horizontal="end">
+  <ion-fab-button size="small">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list>
+    <ion-fab-button>
+      <a href="/anotacoes"><ion-icon name="reader"></ion-icon></a>
+    </ion-fab-button>
+    <ion-fab-button>
+      <a href="/vacina"><ion-icon name="bandage"></ion-icon></a>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+</div>
+
+
 </ion-content>
