@@ -1,4 +1,4 @@
 export class Anotacao{
-  titulo?: string;
-  texto?: string;
+  titulo!: string;
+  texto!: string;
 }
