@@ -8,11 +8,11 @@
 
   <ion-card-header>
     <ion-item>
-      <ion-input placeholder="Título" style="overflow: hidden;"></ion-input>
+      <ion-input placeholder="Título" style="overflow: hidden;" (input)="setTitulo(Sevent.target.value)"></ion-input>
     </ion-item>
   </ion-card-header>
 
-  <textarea placeholder="Escreva seu texto"></textarea>
+  <textarea placeholder="Escreva seu texto" (input)="setTexto(Sevent.target.value)"></textarea>
 
 
 </ion-content>
