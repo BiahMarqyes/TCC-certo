@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
 
 @Component({
@@ -11,20 +12,30 @@ export class AnotacoesPage implements OnInit {
   titulo = undefined;
   texto = undefined;
 
-  constructor(public storage: Storage) { }
+  constructor(public storage: Storage, private route: Router) { }
 
   ngOnInit() {
   }
 
-  setTitulo(valor){
-    this.titulo = valor;
-  }
-  setTexto(valor){
-    this.texto = valor;
+  salvar(): any{
+    if(this.isEmpty(this.titulo)){
+      console.log('Vazio');
+    } else {
+      this.route.navigateByUrl('/home');
+    }
+
   }
 
-  isEmpty(val): boolean {
+  setTitulo(){
+    this.titulo = this.titulo;
+  }
+  setTexto(){
+    this.texto = this.texto;
+  }
+
+  isEmpty(val: undefined): boolean {
     return !val;
   }
+
 
 }

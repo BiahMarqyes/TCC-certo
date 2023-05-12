@@ -8,12 +8,11 @@
 
   <ion-card-header>
     <ion-item>
-      <ion-input placeholder="Título" style="overflow: hidden;" (input)="setTitulo(Sevent.target.value)"></ion-input>
+      <ion-input placeholder="Título" style="overflow: hidden;" (input)="setTitulo()"></ion-input>
     </ion-item>
   </ion-card-header>
 
-  <textarea placeholder="Escreva seu texto" (input)="setTexto(Sevent.target.value)"></textarea>
-
+  <textarea placeholder="Escreva seu texto" (input)="setTexto()"></textarea>
 
 </ion-content>
 
@@ -23,6 +22,6 @@
     <a href="home" style="text-decoration: none"><ion-button expand="full" >Cancelar</ion-button></a>
   </div>
   <div class="divisao">
-    <a style="text-decoration: none"><ion-button expand="full">Salvar</ion-button></a>
+    <a (click)="salvar()" style="text-decoration: none"><ion-button expand="full">Salvar</ion-button></a>
   </div>
 </div>
